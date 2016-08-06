@@ -1,0 +1,24 @@
+option java_package = "dataguru.codec.zeromq";
+option java_outer_classname = "NmeaMessage";
+message ParameterNmeaMessage {
+          required string type = 1;
+          required double time = 2;
+          required double latitude = 3;
+          required double longitude = 4;
+          required uint32 fixed = 5;
+          required uint32 quality = 6;
+          required double dir = 7;
+          required double altitude = 8;
+          required double velocity = 9;
+      }
+message VDMNmeaMessage {
+          required string type = 1;
+          required uint32 numMsgParts = 2;
+          required uint32 msgPartNum = 3;
+          required uint32 seqMsgID = 4;
+          required string channel = 5;
+          required string msgData = 6;
+          required string msgBinary = 7;
+          required string checksum = 8;
+          required uint32 msgType = 9;
+      }
